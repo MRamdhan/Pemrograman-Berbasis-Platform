@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Diskon Toko Online</title>
+</head>
+<body>
+  <h2>Sistem Diskon Toko Online</h2>
+
+  <label for="totalBelanja">Masukkan Total Belanja (Rp): </label>
+  <input type="number" id="totalBelanja" placeholder="contoh: 750000">
+  <button onclick="prosesDiskon()">Hitung Harga Akhir</button>
+
+  <p id="hasil"></p>
+
+  <script>
+    function hitungHargaAkhir(totalBelanja) {
+      let hargaAkhir;
+      if (totalBelanja > 1000000) {
+          // Diskon 15%
+        hargaAkhir = totalBelanja - (totalBelanja * 0.15);
+      } else if (totalBelanja > 500000) {
+        // Diskon 10%
+        hargaAkhir = totalBelanja - (totalBelanja * 0.10);
+      } else {
+        hargaAkhir = totalBelanja;
+      }
+
+      return hargaAkhir;
+    }
+
+    function prosesDiskon() {
+      let totalBelanja = document.getElementById("totalBelanja").value;
+      totalBelanja = parseInt(totalBelanja);
+
+      if (isNaN(totalBelanja) || totalBelanja <= 0) {
+        document.getElementById("hasil").innerText = "Masukkan jumlah belanja yang valid!";
+        return;
+      }
+
+      let hargaAkhir = hitungHargaAkhir(totalBelanja);
+      document.getElementById("hasil").innerText =
+        "Total belanja setelah diskon: Rp " + hargaAkhir.toLocaleString("id-ID");
+    }
+  </script>
+</body>
+</html>
