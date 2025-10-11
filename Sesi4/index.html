@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 4</title>
+</head>
+<body>
+    <script>
+        // CASE 1
+        // const buku = {
+        //     judul: "Pemrograman JavaScript",
+        //     penulis: "John Doe",
+        //     tahun: 2021,
+        //     cetakInfo: function() {
+        //         console.log("Judul: " + this.judul + " oleh " + this.penulis);
+        //     }
+        // }
+
+        // buku.cetakInfo();
+
+        // CASE 2
+        // const mobil = {
+        //     merk: "Toyota",
+        //     model: "Avanza",
+        //     tahun: 2022,
+        //     warna: "Putih",
+        //     nyalakan: function(){
+        //         console.log("Mesin menyala");
+        //     }
+        // }
+        // console.log(mobil.merk);
+        // mobil.nyalakan();
+
+        // CASE 3
+        const user = {
+            nama : "Rizky",
+            usia : 18,
+            pekerjaan : "Developer"
+        };
+
+        user.usia = 22;
+        user.nama = "Ipul";
+        user.status = "Single";
+        user["tahun lahir"] = 2002;
+
+        delete user.usia;
+        
+        console.log(user.nama);
+        console.log(user.usia);
+        console.log(user.pekerjaan);
+        console.log(user.status);
+        console.log(user["tahun lahir"]);
+
+        //CASE 4
+        // const data = {
+        //     "nama lengkap" : "Siti Aisyah",
+        //     "usia" : 24,
+        //     "no-telepon" : "08123456789",
+        // };
+
+        // console.log(data["nama lengkap"]);
+        // console.log(data["usia"]);
+        
+    </script>
+</body>
+</html>
